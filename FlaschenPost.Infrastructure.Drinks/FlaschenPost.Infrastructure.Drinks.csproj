@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Beer\" />
+		<None Remove="Beer\Converters\" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Beer\" />
+		<Folder Include="Beer\Converters\" />
+	</ItemGroup>
+	<ItemGroup>
+		<InternalsVisibleTo Include="FlaschenPost.Infrastructure.Drinks.Tests" />
+		<InternalsVisibleTo Include="FlaschenPost" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\FlashenPost.Drinks\FlaschenPost.Drinks.csproj" />
+	</ItemGroup>
+</Project>
